@@ -1,35 +1,31 @@
-import React, { useEffect, useState } from "react";
+// src/App.js
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "./context/ThemeContext";
+import Navbar from "./components/navbar/Navbar";
+import Home from "./pages/home/Home.jsx";
+import About from "./pages/about-us/About.jsx";
+import Services from "./pages/services/Services.jsx";
+import Contacts from "./pages/contacts/Contacts.jsx";
+import Footer from "./components/footer/Footer.jsx";
 import "./index.css";
 
 const App = () => {
-  const [theme, setTheme] = useState("blueDark");
-
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === "blueDark" ? "light" : "blueDark"));
-  };
-
   return (
-    <div className="min-h-screen bg-base-100 text-base-content flex flex-col items-center justify-center gap-6 transition-colors duration-300">
-      <h1 className="text-4xl font-bold text-primary">
-        {theme === "blueDark" ? "💙 Blue Dark Theme" : "🌞 Light Theme"}
-      </h1>
+    <ThemeProvider>
+      <Router>
+        <Navbar />
 
-      <p className="text-lg">Click below to toggle themes</p>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contacts />} />
+        </Routes>
 
-      <button onClick={toggleTheme} className="btn btn-primary">
-        Toggle Theme
-      </button>
-
-      <div className="flex gap-4 mt-6">
-        <button className="btn btn-secondary">Secondary</button>
-        <button className="btn btn-accent">Accent</button>
-        <button className="btn btn-info">Info</button>
-      </div>
-    </div>
+        <Footer />
+      </Router>
+    </ThemeProvider>
   );
 }
 

@@ -1,0 +1,29 @@
+import { useInView } from "react-intersection-observer";
+
+const AnimatedSection = ({ children, delay = 0, direction = "up" }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
+  const translateClass = {
+  up: "translate-y-[25px]",
+  down: "translate-y-[-25px]",
+  left: "translate-x-[-100px]",
+  right: "translate-x-[100px]",
+};
+
+
+  return (
+    <section
+      ref={ref}
+      className={`transition-all duration-1000 ease-out transform ${inView ? "opacity-100 translate-x-0 translate-y-0" : `opacity-0 ${translateClass[direction]}`
+        }`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      {children}
+    </section>
+  );
+};
+
+export default AnimatedSection;
