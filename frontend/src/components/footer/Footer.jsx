@@ -79,7 +79,7 @@ const Footer = () => {
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><FaGithub /></a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><FaLinkedin /></a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><FaTwitter /></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><FaInstagram /></a>
+            <a href="https://instagram.com" target="https://www.instagram.com/tus_racingteam/" rel="noopener noreferrer" className="hover:text-primary transition-colors"><FaInstagram /></a>
           </div>
         </div>
       </div>
