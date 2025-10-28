@@ -1,5 +1,7 @@
 .go-up-btn {
-  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   bottom: 10px;
   right: 10px;
@@ -15,13 +17,20 @@
   cursor: pointer;
   z-index: 999;
   opacity: 0;
-  transition: 300ms ease;
-
+  transform: translateY(20px);
+  pointer-events: none; /* Prevent clicks when hidden */
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 4px 4px 12px rgba(42, 120, 255, 0.3),
     -4px -4px 12px rgba(47, 253, 164, 0.3);
 }
 
-div .go-up-btn:hover {
+.go-up-btn.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto; /* Enable clicks when visible */
+}
+
+.go-up-btn:hover {
   background: linear-gradient(
     45deg,
     rgba(42, 120, 255, 0.85),
@@ -29,18 +38,14 @@ div .go-up-btn:hover {
   );
   box-shadow: 4px 4px 12px rgba(42, 120, 255, 0.5),
     -4px -4px 12px rgba(47, 253, 164, 0.5);
-  transform: scale(1.05);
+  transform: translateY(0) scale(1.05);
 }
 
-div .go-up-btn:active {
-  transform: scale(0.9);
+.go-up-btn:active {
+  transform: translateY(0) scale(0.9);
 }
 
 .arrow {
   font-size: 18px;
-}
-
-.go-up-btn.show {
-  opacity: 1;
-  transform: translateY(0);
+  display: block;
 }

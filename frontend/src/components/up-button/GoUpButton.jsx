@@ -10,30 +10,29 @@ const GoUpButton = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 900) {
-        setShowButton(true); // Display the button when scrolled more than 900px
+        setShowButton(true); // show the button
       } else {
-        setShowButton(false); // Hide the button when scrolled back up
+        setShowButton(false); // hide the button
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll); // Cleanup the event listener
+    return () => window.removeEventListener("scroll", handleScroll); // cleanup
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Smooth scrolling effect to the top
+      behavior: "smooth", // smooth scrolling
     });
   };
 
   return (
     <a
       onClick={scrollToTop}
-      className={`go-up-btn ${showButton ? "show" : ""}`} 
+      className={`go-up-btn ${showButton ? "show" : ""}`}
     >
-      <FaArrowUp className="arrow" /> 
+      <FaArrowUp className="arrow" />
     </a>
   );
 };
