@@ -61,7 +61,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="bg-base-100 text-base-content">
+    <div className="bg-base-100 text-base-content overflow-x-hidden overflow-y-hidden">
       {/* Hero Section */}
       <div
         className="hero min-h-screen"
@@ -69,7 +69,7 @@ const Home = () => {
           backgroundImage: `url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=3200)`,
         }}
       >
-        <div className={`hero-overlay bg-opacity-40`}></div>
+        <div className={`hero-overlay bg-opacity-40 `}></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
             <AnimatedSection delay={0} direction="left">

@@ -5,7 +5,7 @@ import AnimatedSection from "../animate/AnimatedSection";
 
 const Footer = () => {
   return (
-    <footer className="bg-base-200 text-base-content border-t border-base-300 mt-12">
+    <footer className="bg-base-200 text-base-content border-t border-base-300">
       <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col gap-12">
 
         {/* Top Grid Section */}

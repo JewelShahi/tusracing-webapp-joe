@@ -8,8 +8,8 @@ const AnimatedSection = ({ children, delay = 0, direction = "up" }) => {
 
   // Define translate classes before using them
   const translateClass = {
-    up: "translate-y-[25px]",
-    down: "translate-y-[-25px]",
+    up: "translate-y-[60px]",
+    down: "translate-y-[-60px]",
     left: "translate-x-[-100px]",
     right: "translate-x-[100px]",
   };
