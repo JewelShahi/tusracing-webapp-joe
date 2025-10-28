@@ -61,31 +61,23 @@ const Home = () => {
       <div
         className="hero min-h-screen"
         style={{
-          backgroundImage: `url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=3200)`,
+          backgroundImage: `url('/images/cars/car-italy.jpg')`,
         }}
       >
-        <div className={`hero-overlay bg-opacity-40 `}></div>
+        <div className={`hero-overlay bg-opacity-0`}></div>
+        {/*Text*/}
         <div className="hero-content text-center text-neutral-content">
-          <div className="max-w-md">
+          {/* Big text */}
+          <div className="bg-base-200/60 px-8 py-8 rounded-3xl shadow-3xl pb-48 pt-48 md:pb-32 md:pt-32">
             <AnimatedSection delay={0} direction="left">
-              <h1 className="mb-5 text-5xl md:text-7xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary">
-                Innovate. Create. Elevate.
+              <h1 className="text-5xl md:text-7xl font-bold">
+                TU Sofia Racing Team
               </h1>
             </AnimatedSection>
-
             <AnimatedSection delay={200} direction="right">
-              <p className="mb-5 text-xl font-light">
-                FST Team is your dedicated partner in building the next generation of digital solutions.
+              <p className="mt-4 text-lg md:text-2xl">
+                Engineering Excellence on Wheels
               </p>
-            </AnimatedSection>
-
-            <AnimatedSection delay={400}>
-              <a
-                href="/contact"
-                className="btn btn-primary transition-transform duration-300 hover:scale-110"
-              >
-                Get Started
-              </a>
             </AnimatedSection>
           </div>
         </div>
