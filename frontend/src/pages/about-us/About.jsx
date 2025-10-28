@@ -11,7 +11,7 @@ const About = () => {
         <div className="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300">
           <figure className="relative">
             <img
-              src="/images/racecar.jpg"
+              src="/images/cars/car-on-track.jpg"
               alt="Race car"
               className="object-cover w-full h-48 opacity-80"
             />
@@ -30,7 +30,7 @@ const About = () => {
         <div className="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300">
           <figure className="relative">
             <img
-              src="/images/team.jpg"
+              src="/images/team/team-photo.jpg"
               alt="Team"
               className="object-cover w-full h-48 opacity-80"
             />
@@ -49,7 +49,7 @@ const About = () => {
         <div className="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300">
           <figure className="relative">
             <img
-              src="/images/history.jpg"
+              src="/images/cars/car-testing.jpg"
               alt="History"
               className="object-cover w-full h-48 opacity-80"
             />
@@ -69,7 +69,7 @@ const About = () => {
         <div className="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 ring-1 ring-sky-400">
           <figure className="relative">
             <img
-              src="/images/application.jpg"
+              src="/images/cars/join-team.jpg"
               alt="Application"
               className="object-cover w-full h-48 opacity-80"
             />
