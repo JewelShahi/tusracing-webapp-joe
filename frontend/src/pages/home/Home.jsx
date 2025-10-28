@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from "react";
 import AnimatedSection from "../../components/animate/AnimatedSection";
-
+import { useTheme } from "../../theme-manager/ThemeContext";
 
 const Home = () => {
-  const [theme, setTheme] = useState("lightTheme");
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "lightTheme";
-    setTheme(savedTheme);
-    document.documentElement.setAttribute("data-theme", savedTheme);
-  }, []);
+  const { theme, toggleTheme } = useTheme();
 
   const services = [
     {
