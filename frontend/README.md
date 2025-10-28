@@ -45,7 +45,7 @@ Make sure you have the following installed:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/frontend.git
+git clone https://github.com/Kristian-Y/tusracing-webapp.git
 ```
 
 2. Navigate into the project directory:
