@@ -15,7 +15,11 @@ const About = () => {
               alt="Race car"
               className="object-cover w-full h-48 opacity-80"
             />
-            <div className="absolute top-4 left-4 text-4xl">🏎️</div>
+            <img
+              src="/images/icons/about-us/racecar.png"
+              alt="Racecar icon"
+              className="absolute top-4 left-4 w-10 h-10"
+            />
           </figure>
           <div className="card-body">
             <h2 className="card-title text-white">Our Race Cars</h2>
@@ -34,7 +38,11 @@ const About = () => {
               alt="Team"
               className="object-cover w-full h-48 opacity-80"
             />
-            <div className="absolute top-4 left-4 text-4xl">👥</div>
+            <img
+              src="/images/icons/about-us/team.png"
+              alt="Team icon"
+              className="absolute top-4 left-4 w-10 h-10"
+            />
           </figure>
           <div className="card-body">
             <h2 className="card-title text-white">Our Team</h2>
@@ -53,7 +61,11 @@ const About = () => {
               alt="History"
               className="object-cover w-full h-48 opacity-80"
             />
-            <div className="absolute top-4 left-4 text-4xl">🕒</div>
+            <img
+              src="/images/icons/about-us/history.png"
+              alt="History icon"
+              className="absolute top-4 left-4 w-10 h-10"
+            />
           </figure>
           <div className="card-body">
             <h2 className="card-title text-white">Our History</h2>
@@ -66,14 +78,18 @@ const About = () => {
         </div>
 
         {/* Your Application */}
-        <div className="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 ring-1 ring-sky-400">
+        <div className="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 ">
           <figure className="relative">
             <img
               src="/images/cars/join-team.jpg"
               alt="Application"
               className="object-cover w-full h-48 opacity-80"
             />
-            <div className="absolute top-4 left-4 text-4xl">📋</div>
+            <img
+              src="/images/icons/about-us/application.png"
+              alt="Application icon"
+              className="absolute top-4 left-4 w-10 h-10"
+            />
           </figure>
           <div className="card-body">
             <h2 className="card-title text-white">Your Application</h2>
