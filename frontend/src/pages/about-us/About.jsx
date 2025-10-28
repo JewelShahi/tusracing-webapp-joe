@@ -5,8 +5,8 @@ const About = () => {
   const { theme } = useTheme();
 
   return (
-    <div className=" min-h-screen bg-neutral text-neutral-content flex flex-col items-center justify-center px-4 py-10">
-      
+    <div className=" min-h-screen bg-base-100 text-neutral-content flex flex-col items-center justify-center px-4 py-10">
+
       {/* Intro text */}
       <AnimatedSection direction="up" delay={100}>
         <h2 className="text-center text-lg mb-10 max-w-3xl">
@@ -17,11 +17,17 @@ const About = () => {
 
       {/* Grid of cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl w-full">
-        
+
         {/* Our Race Cars */}
         <AnimatedSection direction="up" delay={200}>
-          {/* FIX: Added h-full to make the card stretch to the height of the tallest card in the row */}
-          <div className="card h-full bg-base-300/30 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:ring-2">
+          <div
+            className="card h-full bg-base-300/30 transition-all duration-300 hover:scale-105 hover:ring-2"
+            style={{
+              boxShadow: "0 4px 10px rgba(0, 0, 0, 0.7)", 
+            }}
+            onMouseEnter={e => e.currentTarget.style.boxShadow = "0 0px 20px rgba(40, 92, 250, 0.7)"}
+            onMouseLeave={e => e.currentTarget.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.7)"}
+          >
             <figure className="relative">
               <img
                 src="/images/cars/car-on-track.jpg"
@@ -37,7 +43,7 @@ const About = () => {
             <div className="card-body">
               <h2 className="card-title font-bold text-2xl">Our Race Cars</h2>
               <hr className={`my-2 h-[2px] border-0 ${theme === "darkTheme" ? "bg-white" : "bg-black"}`} />
-              <p>
+              <p className="font-light">
                 Our race cars are the result of cutting-edge engineering and
                 meticulous design. Each car is built to perform at the highest
                 level, combining speed, agility, and precision on the track.
@@ -48,8 +54,14 @@ const About = () => {
 
         {/* Our Team */}
         <AnimatedSection direction="up" delay={300}>
-          {/* FIX: Added h-full */}
-          <div className="card h-full bg-base-300/30 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:ring-2">
+          <div
+            className="card h-full bg-base-300/30 transition-all duration-300 hover:scale-105 hover:ring-2"
+            style={{
+              boxShadow: "0 4px 10px rgba(0, 0, 0, 0.7)", 
+            }}
+            onMouseEnter={e => e.currentTarget.style.boxShadow = "0 0px 20px rgba(40, 92, 250, 0.7)"}
+            onMouseLeave={e => e.currentTarget.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.7)"}
+          >
             <figure className="relative">
               <img
                 src="/images/team/team-photo.jpg"
@@ -65,7 +77,7 @@ const About = () => {
             <div className="card-body">
               <h2 className="card-title font-bold text-2xl">Our Team</h2>
               <hr className={`my-2 h-[2px] border-0 ${theme === "darkTheme" ? "bg-white" : "bg-black"}`} />
-              <p>
+              <p className="font-light">
                 Our team is made up of passionate individuals dedicated to
                 excellence in engineering and motorsport. Together, we combine
                 diverse skills to build high-performance racecars and push the
@@ -77,8 +89,14 @@ const About = () => {
 
         {/* Our History */}
         <AnimatedSection direction="up" delay={400}>
-          {/* FIX: Added h-full */}
-          <div className="card h-full bg-base-300/30 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:ring-2">
+          <div
+            className="card h-full bg-base-300/30 transition-all duration-300 hover:scale-105 hover:ring-2"
+            style={{
+              boxShadow: "0 4px 10px rgba(0, 0, 0, 0.7)", 
+            }}
+            onMouseEnter={e => e.currentTarget.style.boxShadow = "0 0px 20px rgba(40, 92, 250, 0.7)"}
+            onMouseLeave={e => e.currentTarget.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.7)"}
+          >
             <figure className="relative">
               <img
                 src="/images/cars/car-testing.jpg"
@@ -94,7 +112,7 @@ const About = () => {
             <div className="card-body">
               <h2 className="card-title font-bold text-2xl">Our History</h2>
               <hr className={`my-2 h-[2px] border-0 ${theme === "darkTheme" ? "bg-white" : "bg-black"}`} />
-              <p>
+              <p className="font-light">
                 Our team began with a shared passion for motorsport and
                 innovation. Over the years, we’ve grown into a respected force in
                 Formula Student, continuously advancing our engineering
@@ -106,8 +124,14 @@ const About = () => {
 
         {/* Your Application */}
         <AnimatedSection direction="up" delay={500}>
-          {/* FIX: Added h-full */}
-          <div className="card h-full bg-base-300/30 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:ring-2">
+          <div
+            className="card h-full bg-base-300/30 transition-all duration-300 hover:scale-105 hover:ring-2"
+            style={{
+              boxShadow: "0 4px 10px rgba(0, 0, 0, 0.7)", 
+            }}
+            onMouseEnter={e => e.currentTarget.style.boxShadow = "0 0px 20px rgba(40, 92, 250, 0.7)"}
+            onMouseLeave={e => e.currentTarget.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.7)"}
+          >
             <figure className="relative">
               <img
                 src="/images/cars/join-team.jpg"
@@ -123,7 +147,7 @@ const About = () => {
             <div className="card-body">
               <h2 className="card-title font-bold text-2xl">Your Application</h2>
               <hr className={`my-2 h-[2px] border-0 ${theme === "darkTheme" ? "bg-white" : "bg-black"}`} />
-              <p>
+              <p className="font-light">
                 Apply now to join our Formula Student team and showcase your
                 engineering skills. Be part of a dynamic project that combines
                 innovation, teamwork, and racing.
@@ -133,6 +157,7 @@ const About = () => {
         </AnimatedSection>
 
       </div>
+
     </div>
   );
 };
