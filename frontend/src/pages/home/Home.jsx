@@ -73,16 +73,19 @@ const Home = () => {
       <div
         className="hero min-h-screen relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('/images/cars/car-italy.jpg')`,
+          backgroundImage: `url('/images/cars/car-italy.jpg')`,
           backgroundAttachment: 'fixed',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
         }}
       >
-        <div className="hero-overlay bg-gradient-to-b from-transparent via-transparent to-base-100/20"></div>
         <div className="hero-content text-center text-neutral-content relative z-10">
-          <div className="max-w-4xl">
+          <div
+            className={`max-w-4xl mx-auto p-10 rounded-2xl backdrop-blur-sm shadow-2xl transition-colors duration-500
+        ${theme === "darkTheme" ? "bg-black/50 text-white" : "bg-white/40 text-base-content"}
+      `}
+          >
             <AnimatedSection delay={0} direction="up">
               <div className="mb-6">
                 <span className="inline-block px-4 py-2 bg-primary text-primary-content text-sm font-bold rounded-full uppercase tracking-wider animate-pulse">
@@ -90,36 +93,51 @@ const Home = () => {
                 </span>
               </div>
             </AnimatedSection>
+
             <AnimatedSection delay={200} direction="up">
-              <h1 className="text-6xl md:text-8xl font-black mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-primary">
+              <h1 className="text-6xl md:text-8xl font-black mb-6">
                 TU Sofia
                 <br />
                 <span className="text-primary">Racing Team</span>
               </h1>
             </AnimatedSection>
+
             <AnimatedSection delay={400} direction="up">
-              <p className="text-xl md:text-3xl font-light mb-8 text-gray-200">
+              <p className="text-xl md:text-3xl font-light mb-8">
                 Engineering Excellence. Racing Innovation.
               </p>
             </AnimatedSection>
+
             <AnimatedSection delay={600} direction="up">
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="btn btn-primary btn-lg px-8 shadow-2xl hover:scale-105 transition-transform duration-300">
                   Our Cars
                 </button>
-                <button className="btn btn-outline btn-lg px-8 border-white text-white hover:bg-white hover:text-base-100 transition-all duration-300">
+                <button className="btn btn-lg px-8  hover:bg-accent hover:text-base-100 transition-all duration-300">
                   Join Team
                 </button>
               </div>
             </AnimatedSection>
           </div>
         </div>
+
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          <svg
+            className="w-6 h-6 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
           </svg>
         </div>
       </div>
+
 
       {/* Stats Bar */}
       <div className="bg-primary text-primary-content py-8">
@@ -271,10 +289,11 @@ const Home = () => {
               </a>
               <a
                 href="/join"
-                className="btn btn-outline btn-lg px-10 border-primary-content text-primary-content hover:bg-base-100 hover:text-primary font-bold transition-all duration-300"
+                className="btn btn-primary btn-lg px-10 font-bold transition-all duration-300 hover:bg-accent/80 hover:text-primary-content"
               >
                 Join Our Team
               </a>
+
             </div>
           </AnimatedSection>
         </div>

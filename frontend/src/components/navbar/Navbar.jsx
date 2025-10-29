@@ -29,18 +29,21 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full fixed top-0 z-50 backdrop-blur-md shadow-md transition-colors duration-500
-        ${theme === "darkTheme" ? "bg-blue-600/30" : "bg-white/90"}
-      `}
+      className={`w-full fixed top-0 z-50 backdrop-blur-md transition-colors duration-500
+    ${theme === "darkTheme"
+          ? "bg-base-200/60 shadow-[0_2px_15px_rgba(255,255,255,0.15)]"
+          : "bg-base-100/90 shadow-[0_2px_15px_rgba(0,0,0,0.25)]"}
+  `}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between ">
+
+      <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
         {/* Logo */}
         <img
-            src="images/icons/logo/logo-tus-white.svg"
-            alt="FST Racing Logo"
-            className="w-[120px] object-contain cursor-pointer"
-            onClick={() => (window.location.href = "/")}
-          />
+          src="images/icons/logo/logo-tus-white.svg"
+          alt="FST Racing Logo"
+          className="w-[120px] object-contain cursor-pointer"
+          onClick={() => (window.location.href = "/")}
+        />
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
@@ -49,7 +52,7 @@ const Navbar = () => {
               <li key={item.name} className="active:scale-90 duration-300">
                 <a
                   href={item.href}
-                  className="relative group font-medium text-base-content transition-all hover:text-accent"
+                  className="relative group font-medium text-base-content transition-all hover:text-primary"
                 >
                   <span>{item.name}</span>
                   <span className="absolute left-0 -bottom-1 block w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -86,50 +89,48 @@ const Navbar = () => {
             aria-controls="mobile-menu"
             aria-expanded={isMenuOpen}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="relative w-8 h-8 flex flex-col justify-center items-center focus:outline-none"
+            className="relative w-8 h-8 flex flex-col justify-center items-center focus:outline-none text-base-content"
           >
             {/* Top bar */}
             <span
               className={`absolute block h-[2px] w-6 bg-current rounded transition-transform duration-300 ease-in-out origin-center
-        ${isMenuOpen ? "rotate-45" : "-translate-y-2"}
-      `}
+                ${isMenuOpen ? "rotate-45" : "-translate-y-2"}
+              `}
             ></span>
 
             {/* Middle bar */}
             <span
               className={`absolute block h-[2px] w-6 bg-current rounded transition-all duration-300 ease-in-out origin-center
-        ${isMenuOpen ? "opacity-0 scale-50" : "opacity-100 scale-100"}
-      `}
+                ${isMenuOpen ? "opacity-0 scale-50" : "opacity-100 scale-100"}
+              `}
             ></span>
 
             {/* Bottom bar */}
             <span
               className={`absolute block h-[2px] w-6 bg-current rounded transition-transform duration-300 ease-in-out origin-center
-        ${isMenuOpen ? "-rotate-45" : "translate-y-2"}
-      `}
+                ${isMenuOpen ? "-rotate-45" : "translate-y-2"}
+              `}
             ></span>
           </button>
         </div>
-
-
       </div>
 
       {/* Mobile Menu */}
       <div
         id="mobile-menu"
         className={`md:hidden fixed top-0 left-0 w-full h-screen z-40 flex flex-col items-center justify-center px-6 transition-all duration-500 ease-in-out
-    ${theme === "darkTheme" ? "bg-blue-950 text-white" : "bg-white text-gray-900"}
-    ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"}
-  `}
+          ${theme === "darkTheme" ? "bg-base-100" : "bg-base-100"}
+          ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"}
+        `}
       >
         {/* Logo Section */}
         <div className="flex flex-row items-center mb-10 gap-4">
           <img
-            src="/logo.png" // <-- Replace with your logo path
+            src="images/icons/logo/logo-tus-white.svg"
             alt="FST Racing Logo"
             className="w-16 h-16 object-contain mb-2 sm:w-20 sm:h-20"
           />
-          <h1 className="text-2xl sm:text-3xl font-bold tracking-wide">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-wide text-base-content">
             FST Racing
           </h1>
         </div>
@@ -140,7 +141,7 @@ const Navbar = () => {
             <li key={item.name}>
               <a
                 href={item.href}
-                className="text-lg font-medium hover:text-primary transition-colors"
+                className="text-lg font-medium text-base-content hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
@@ -189,8 +190,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-
-    </nav >
+    </nav>
   );
 };
 

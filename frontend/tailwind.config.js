@@ -21,14 +21,14 @@ module.exports = {
           "accent-focus": "#008842",
           "accent-content": "#ffffff",
 
-          neutral: "#E0E5EB", // Medium gray for better contrast with white
+          neutral: "#E0E5EB", // Medium gray for better contrast
           "neutral-focus": "#C0C8D2",
           "neutral-content": "#15151E",
 
-          "base-100": "#FFFFFF", // Clean white for the main background
-          "base-200": "#F0F4F8", // More distinct off-white for cards and sections
-          "base-300": "#E0E5EB", // Lighter gray for nested elements
-          "base-content": "#15151E", // Dark charcoal for excellent readability
+          "base-100": "#F0F7FF", // Light blue-tinted background instead of pure white
+          "base-200": "#E0EEFF", // Slightly darker blue for cards
+          "base-300": "#D0E5FF", // Even darker for nested elements
+          "base-content": "#0F172A", // Darker text for better contrast
 
           info: "#0052CC", // Blue tone for info messages
           success: "#00A651", // Green for success messages
