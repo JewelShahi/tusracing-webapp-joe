@@ -15,14 +15,15 @@ const Gallery = () => {
       id: 1,
       title: "Race Cars",
       icon: <FaCar />,
-      coverImage: "https://picsum.photos/seed/racecar1/400/300.jpg",
+      coverImage: "https://images.ft.com/v3/image/raw/ftcms%3Ae2975928-5a3d-4e11-beb8-c282336fe187?source=next-article&fit=scale-down&quality=highest&width=1440&dpr=1",
       images: [
-        "https://picsum.photos/seed/racecar1/1200/800.jpg",
-        "https://picsum.photos/seed/racecar2/1200/800.jpg",
-        "https://picsum.photos/seed/racecar3/1200/800.jpg",
-        "https://picsum.photos/seed/racecar4/1200/800.jpg",
-        "https://picsum.photos/seed/racecar5/1200/800.jpg",
-        "https://picsum.photos/seed/racecar6/1200/800.jpg"
+        "https://images.ft.com/v3/image/raw/ftcms%3Ae2975928-5a3d-4e11-beb8-c282336fe187?source=next-article&fit=scale-down&quality=highest&width=1440&dpr=1",
+        "https://media.formula1.com/image/upload/c_lfill,w_2048/q_auto/v1740000000/fom-website/2023/McLaren/Formula%201%20header%20template%20(35).webp",
+        "https://media.formula1.com/image/upload/c_lfill,w_2048/q_auto/v1740000000/fom-website/2023/McLaren/Formula%201%20header%20template%20(35).webp",
+        "https://www.racefans.net/wp-content/uploads/2024/01/racefansdotnet-23-01-16-17-31-43-1-McLaren-F1-2024-Livery-Front.jpg",
+        "https://www.formula1.com/trackside-images/2025/Formula_1_Testing_in_Bahrain___Day_3/2202439875.jpg",
+        "https://e0.365dm.com/22/11/2048x1152/skysports-lando-norris-mclaren_5962333.jpg?20221111155457",
+        "https://di-uploads-pod31.dealerinspire.com/mclarenpalmbeach/uploads/2022/09/Orange-McLaren-MCL36.jpg"
       ]
     },
     {
@@ -72,7 +73,7 @@ const Gallery = () => {
 
   const goToPreviousImage = () => {
     if (selectedAlbum) {
-      setCurrentImageIndex((prevIndex) => 
+      setCurrentImageIndex((prevIndex) =>
         prevIndex === 0 ? selectedAlbum.images.length - 1 : prevIndex - 1
       );
     }
@@ -80,7 +81,7 @@ const Gallery = () => {
 
   const goToNextImage = () => {
     if (selectedAlbum) {
-      setCurrentImageIndex((prevIndex) => 
+      setCurrentImageIndex((prevIndex) =>
         prevIndex === selectedAlbum.images.length - 1 ? 0 : prevIndex + 1
       );
     }
@@ -94,8 +95,8 @@ const Gallery = () => {
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!isModalOpen) return;
-      
-      switch(e.key) {
+
+      switch (e.key) {
         case 'Escape':
           closeModal();
           break;
@@ -151,7 +152,7 @@ const Gallery = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {albums.map((album, index) => (
             <AnimatedSection key={album.id} direction="up" delay={200 + index * 100}>
-              <div 
+              <div
                 className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:scale-105 bg-base-200"
                 onClick={() => openAlbum(album)}
               >
@@ -185,14 +186,13 @@ const Gallery = () => {
 
       {/* ================= IMAGE MODAL ================= */}
       {isModalOpen && selectedAlbum && (
-        <div className={`fixed inset-0 z-50 flex items-center justify-center transition-opacity duration-300 ${
-          isModalOpen ? 'opacity-100' : 'opacity-0'
-        }`}>
-          <div 
+        <div className={`fixed inset-0 z-50 flex items-center justify-center transition-opacity duration-300 ${isModalOpen ? 'opacity-100' : 'opacity-0'
+          }`}>
+          <div
             className="absolute inset-0 bg-black/90 backdrop-blur-sm"
             onClick={closeModal}
           ></div>
-          
+
           <div className="relative w-11/12 max-w-4xl md:w-4/5 lg:w-3/4 xl:w-2/3 flex flex-col">
             {/* Close Button - Fixed positioning inside the modal */}
             <button
@@ -251,11 +251,10 @@ const Gallery = () => {
                       e.stopPropagation();
                       goToImage(index);
                     }}
-                    className={`flex-shrink-0 w-12 h-12 rounded overflow-hidden transition-all duration-300 ${
-                      index === currentImageIndex
+                    className={`flex-shrink-0 w-12 h-12 rounded overflow-hidden transition-all duration-300 ${index === currentImageIndex
                         ? 'ring-2 ring-primary ring-offset-1 ring-offset-black scale-110'
                         : 'opacity-60 hover:opacity-100'
-                    }`}
+                      }`}
                   >
                     <img
                       src={image}
