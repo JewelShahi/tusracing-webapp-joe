@@ -7,19 +7,6 @@ const History = () => {
   const { theme } = useTheme();
   const [activeYear, setActiveYear] = useState(2018);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [particles, setParticles] = useState([]);
-
-  // Generate random particles for background effect
-  useEffect(() => {
-    const newParticles = Array.from({ length: 15 }, (_, i) => ({
-      id: i,
-      size: Math.random() * 15 + 5,
-      left: `${Math.random() * 100}%`,
-      animationDelay: `${Math.random() * 5}s`,
-      animationDuration: `${Math.random() * 20 + 10}s`
-    }));
-    setParticles(newParticles);
-  }, []);
 
   // Auto-play timeline
   useEffect(() => {
@@ -102,24 +89,6 @@ const History = () => {
 
   return (
     <div className="min-h-[100vh] pt-14 bg-base-100 relative overflow-hidden">
-      {/* Animated Background Particles */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        {particles.map(particle => (
-          <div
-            key={particle.id}
-            className="absolute rounded-full bg-primary/20 animate-pulse"
-            style={{
-              width: `${particle.size}px`,
-              height: `${particle.size}px`,
-              left: particle.left,
-              top: `${Math.random() * 100}%`,
-              animationDelay: particle.animationDelay,
-              animationDuration: particle.animationDuration,
-            }}
-          />
-        ))}
-      </div>
-
       {/* ================= HERO SECTION ================= */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
@@ -224,7 +193,6 @@ const History = () => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };
