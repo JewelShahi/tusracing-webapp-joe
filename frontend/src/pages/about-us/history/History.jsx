@@ -101,7 +101,7 @@ const History = () => {
   ];
 
   return (
-    <div className="min-h-[100vh] pt-8 bg-base-100 relative overflow-hidden">
+    <div className="min-h-[100vh] pt-14 bg-base-100 relative overflow-hidden">
       {/* Animated Background Particles */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         {particles.map(particle => (
@@ -192,7 +192,7 @@ const History = () => {
 
           {/* Event Details */}
           <div className="lg:w-3/4">
-            <AnimatedSection key={activeYear} direction="up" delay={200}>
+            <AnimatedSection key={activeYear} direction="right" delay={200}>
               <div className="card bg-base-200 shadow-xl overflow-hidden">
                 <div className="h-64 sm:h-80">
                   <img

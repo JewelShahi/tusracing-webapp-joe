@@ -320,7 +320,7 @@ const Sponsors = () => {
                             <option value="" disabled>Select a sponsorship tier</option>
                             {sponsorTiers.map((tier) => <option key={tier.id} value={tier.name}>{tier.name}</option>)}
                           </select>
-                          {formData.tier && <span className="label-text-alt mt-1">You can also click on a tier above to select it</span>}
+                          {<span className="label-text-alt mt-1 text-base-content/50">You can also click on a tier above to auto select it</span>}
                           {errors.tier && (
                             <span className={`text-sm mt-1 ${theme === 'darkTheme' ? 'text-red-400' : 'text-error'}`}>{errors.tier}</span>
                           )}
