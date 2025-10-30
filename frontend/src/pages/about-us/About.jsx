@@ -174,7 +174,7 @@ const About = () => {
               <a href="/join" className="btn btn-primary btn-lg px-8">
                 Join the Team
               </a>
-              <a href="/contact" className="btn btn-outline btn-primary btn-lg px-8">
+              <a href="/contact" className="btn btn-outline text-primary-content bg-accent btn-lg px-8">
                 Contact Us
               </a>
             </div>

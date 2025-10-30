@@ -6,4 +6,8 @@
   :root {
     --rounded-btn: 100px;
   }
+
+  .btn {
+    @apply shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:brightness-95 border-none;
+  }
 }

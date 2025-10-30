@@ -22,8 +22,8 @@ const Footer = () => {
                 <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
                   <FaFlagCheckered className="text-white text-xl" />
                 </div>
-                <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
-                  TU Sofia Racing Team
+                <h3 className="text-2xl font-bold">
+                  <span className="font-black">TU Sofia</span> <span className="text-primary font-bold">Racing Team</span>
                 </h3>
               </div>
               <p className="text-base-content/80 mb-6 text-center lg:text-left max-w-md">
@@ -33,11 +33,11 @@ const Footer = () => {
               <div className="flex gap-4 mb-6">
                 <div className="flex items-center gap-2">
                   <FaTrophy className="text-accent" />
-                  <span className="text-sm font-semibold">10+ Awards</span>
+                  <span className="text-sm font-semibold">1 Award</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <FaTools className="text-primary" />
-                  <span className="text-sm font-semibold">8 Cars Built</span>
+                  <span className="text-sm font-semibold">3 Cars Built</span>
                 </div>
               </div>
             </div>

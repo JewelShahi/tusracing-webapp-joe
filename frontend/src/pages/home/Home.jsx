@@ -283,16 +283,17 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
                 href="/contact"
-                className="btn bg-base-100 text-primary btn-lg px-10 font-bold hover:scale-105 transition-all duration-300 shadow-2xl"
+                className="btn bg-base-100 btn-lg px-10 font-bold "
               >
                 Become a Sponsor
               </a>
               <a
                 href="/join"
-                className="btn btn-primary btn-lg px-10 font-bold transition-all duration-300 hover:bg-accent/80 hover:text-primary-content"
+                className="btn btn-primary btn-lg px-10 font-bold border-none hover:bg-accent/80 hover:text-primary-content"
               >
                 Join Our Team
               </a>
+
 
             </div>
           </AnimatedSection>

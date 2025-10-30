@@ -46,7 +46,7 @@ module.exports = {
           "secondary-focus": "#3A3A4E",
           "secondary-content": "#ffffff",
 
-          accent: "#00CC66", // Brighter green for dark theme
+          accent: "#00964b", // Brighter green for dark theme
           "accent-focus": "#00DD77",
           "accent-content": "#ffffff",
 
