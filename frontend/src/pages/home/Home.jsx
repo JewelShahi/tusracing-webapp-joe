@@ -63,7 +63,7 @@ const Home = () => {
     <div className="bg-base-100 text-base-content overflow-x-hidden">
       {/* Hero Section with Parallax Effect */}
       <div
-        className="hero min-h-[100vh] sm:min-h-screen relative"
+        className="hero min-h-[100vh] pt-8 sm:min-h-screen relative"
         style={{
           backgroundImage: `url('/images/cars/car-italy.jpg')`,
           backgroundAttachment: 'fixed',
