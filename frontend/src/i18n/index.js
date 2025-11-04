@@ -10,7 +10,7 @@ i18n
       en: { translation: en },
       bg: { translation: bg },
     },
-    lng: "en", // език по подразбиране
+    lng: "en", // default language
     fallbackLng: "en",
     interpolation: { escapeValue: false },
   });
