@@ -58,7 +58,7 @@ const NotFound = () => {
   useEffect(() => {
     const factInterval = setInterval(() => {
       setFactIndex(prev => (prev + 1) % f1Facts.length);
-    }, 5000);
+    }, 2000);
     return () => clearInterval(factInterval);
   }, [f1Facts.length]); // added dependency to satisfy ESLint
 

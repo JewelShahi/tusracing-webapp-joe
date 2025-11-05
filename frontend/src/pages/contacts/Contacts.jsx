@@ -142,8 +142,8 @@ const Contacts = () => {
       name: t('contacts.contactMethods.email'),
       icon: <FaEnvelope />,
       color: "primary",
-      value: "contact@racingteam.com",
-      link: "mailto:contact@racingteam.com"
+      value: "formulastudentbg@gmail.com",
+      link: "https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=formulastudentbg@gmail.com"
     },
     {
       id: 2,
@@ -428,11 +428,11 @@ const Contacts = () => {
                     For all inquiries, please reach out to our team email. We'll direct your message to the right person.
                   </p>
                   <a 
-                    href="mailto:contact@racingteam.com" 
+                    href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=formulastudentbg@gmail.com" 
                     className="text-primary hover:underline flex items-center justify-center text-lg font-medium"
                   >
                     <FaEnvelope className="mr-2" />
-                    contact@racingteam.com
+                    formulastudentbg@gmail.com
                   </a>
                 </div>
               </div>
@@ -508,13 +508,13 @@ const Contacts = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/sponsor"
-                className="btn bg-base-100 btn-md sm:btn-lg px-6 sm:px-10 font-bold text-primary hover:bg-accent hover:text-accent-content"
+                className="btn bg-base-100 btn-md sm:btn-lg px-6 sm:px-10 font-bold"
               >
                 Become a Sponsor
               </a>
               <a
                 href="/donate"
-                className="btn btn-outline btn-md sm:btn-lg px-6 sm:px-10 border-base-100 text-base-100 hover:bg-base-100 hover:text-primary"
+                className="btn btn-md sm:btn-lg px-6 sm:px-10 bg-primary hover:bg-accent text-primary-content"
               >
                 Make a Donation
               </a>

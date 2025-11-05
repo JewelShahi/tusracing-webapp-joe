@@ -107,7 +107,7 @@ const Home = () => {
                 <a href="/about/our-cars" className="btn btn-primary btn-md sm:btn-lg px-6 sm:px-8 shadow-2xl hover:scale-105 transition-transform duration-300">
                   {t('home.buttons.ourCars')}
                 </a>
-                <a href="/about/join-us" className="btn btn-md sm:btn-lg px-6 sm:px-8 hover:bg-accent hover:text-base-100 transition-all duration-300">
+                <a href="/about/join-us" className="btn btn-md sm:btn-lg px-6 sm:px-8 hover:bg-accent text-primary-content transition-all duration-300">
                   {t('home.buttons.joinTeam')}
                 </a>
               </div>
