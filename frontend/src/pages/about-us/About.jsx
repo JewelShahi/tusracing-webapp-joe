@@ -123,11 +123,11 @@ const About = () => {
               {t('about.ctaDescription')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/join-us" className="btn btn-primary btn-lg px-8">
+              <a href="/about/join-us" className="btn btn-primary btn-lg px-8">
                 {t('about.ctaButtons.joinTheTeam')}
               </a>
               <a
-                href="/contact"
+                href="/contacts"
                 className="btn btn-outline text-primary-content bg-accent hover:bg-accent/90 btn-lg px-8 hover:text-primary-content"
               >
                 {t('about.ctaButtons.contactUs')}
