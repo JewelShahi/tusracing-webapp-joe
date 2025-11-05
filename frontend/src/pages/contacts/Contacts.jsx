@@ -514,7 +514,7 @@ const Contacts = () => {
               </a>
               <a
                 href="/donate"
-                className="btn btn-md sm:btn-lg px-6 sm:px-10 bg-primary hover:bg-accent text-primary-content"
+                className="btn btn-md sm:btn-lg px-6 sm:px-10 bg-primary hover:bg-accent/90 text-primary-content"
               >
                 Make a Donation
               </a>

@@ -300,7 +300,7 @@ const Team = () => {
           <AnimatedSection delay={400}>
             <a
               href="/join"
-              className="btn bg-base-100 btn-md sm:btn-lg px-6 sm:px-10 font-bold text-primary-content hover:bg-accent"
+              className="btn bg-base-100 btn-md sm:btn-lg px-6 sm:px-10 font-bold text-primary-content hover:bg-accent/90"
             >
               {t('team.applyNow')}
             </a>

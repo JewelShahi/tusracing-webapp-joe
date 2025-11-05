@@ -128,7 +128,7 @@ const About = () => {
               </a>
               <a
                 href="/contact"
-                className="btn btn-outline text-primary-content bg-accent btn-lg px-8"
+                className="btn btn-outline text-primary-content bg-accent hover:bg-accent/90 btn-lg px-8 hover:text-primary-content"
               >
                 {t('about.ctaButtons.contactUs')}
               </a>

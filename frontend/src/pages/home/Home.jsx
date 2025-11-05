@@ -107,7 +107,7 @@ const Home = () => {
                 <a href="/about/our-cars" className="btn btn-primary btn-md sm:btn-lg px-6 sm:px-8 shadow-2xl hover:scale-105 transition-transform duration-300">
                   {t('home.buttons.ourCars')}
                 </a>
-                <a href="/about/join-us" className="btn btn-md sm:btn-lg px-6 sm:px-8 hover:bg-accent text-primary-content transition-all duration-300">
+                <a href="/about/join-us" className="btn btn-md sm:btn-lg px-6 sm:px-8 hover:bg-accent/90 text-primary-content transition-all duration-300">
                   {t('home.buttons.joinTeam')}
                 </a>
               </div>
@@ -282,7 +282,7 @@ const Home = () => {
               </a>
               <a
                 href="/join"
-                className="btn btn-primary btn-md sm:btn-lg px-6 sm:px-10 font-bold border-none hover:bg-accent/80 hover:text-primary-content"
+                className="btn btn-primary btn-md sm:btn-lg px-6 sm:px-10 font-bold border-none hover:bg-accent/90/80 hover:text-primary-content"
               >
                 {t('home.cta.joinOurTeam')}
               </a>

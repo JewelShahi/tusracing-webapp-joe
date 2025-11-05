@@ -74,7 +74,7 @@ const SponsorCarousel = () => {
             <AnimatedSection delay={100} direction="up">
               <a
                 href="/sponsors"
-                className="btn btn-sm rounded-full px-5 bg-primary text-primary-content hover:bg-accent hover:text-accent-content transition-all"
+                className="btn btn-sm rounded-full px-5 bg-primary text-primary-content hover:bg-accent/90 hover:text-accent-content transition-all"
               >
                 Become a Sponsor
               </a>
@@ -130,7 +130,7 @@ const SponsorCarousel = () => {
           <AnimatedSection delay={100} direction="up">
             <a
               href="/sponsors"
-              className="btn rounded-full px-5 bg-primary text-primary-content hover:bg-accent hover:text-accent-content transition-all"
+              className="btn rounded-full px-5 bg-primary text-primary-content hover:bg-accent/90 hover:text-accent-content transition-all"
             >
               Become a Sponsor
             </a>
