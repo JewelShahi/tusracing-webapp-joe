@@ -75,7 +75,8 @@
     "ctaDescription": "Become part of a legacy of engineering excellence. Whether you're a student, sponsor, or enthusiast, there's a place for you in our team.",
     "cta": {
       "becomeSponsor": "Become a Sponsor",
-      "joinOurTeam": "Join Our Team"
+      "joinOurTeam": "Join Our Team",
+      "makeDonation": "Make a Donation"
     }
   },
 
@@ -208,8 +209,7 @@
       "sendMessage": "Send Message",
       "sending": "Sending...",
       "messageSentTitle": "Message Sent!",
-      "messageSentDescription": "Thank you for your message. We'll get back to you soon."
-      ,
+      "messageSentDescription": "Thank you for your message. We'll get back to you soon.",
       "placeholders": {
         "firstName": "John Doe",
         "email": "john@example.com",
@@ -220,7 +220,7 @@
     "findUsTitle": "Find Us",
     "findUsMapTitle": "Our Location",
     "supportTitle": "Support Our Racing Team",
-    "supportDescription": "Your support helps us build competitive race cars and develop the next generation of engineers. Consider sponsoring our team or making a donation.",
+    "supportDescription": "Your support helps us build competitive race cars and develop the next generation of engineers.",
     "becomeSponsor": "Become a Sponsor",
     "makeDonation": "Make a Donation",
     "followUsTitle": "Follow Us on Social Media",
@@ -285,7 +285,8 @@
     "explore": "Explore",
     "applyNow": "Apply Now",
     "becomeSponsor": "Become a Sponsor",
-    "joinOurTeam": "Join Our Team"
+    "joinOurTeam": "Join Our Team",
+    "makeDonation": "Make a Donation"
   },
 
   "services": {
