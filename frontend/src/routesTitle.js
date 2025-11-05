@@ -8,8 +8,8 @@ export const routeTitles = {
   "/about/our-team": `${PREFIX} - Our Team`,
   "/about/our-history": `${PREFIX} - Our History`,
   "/about/join-us": `${PREFIX} - Join Us`,
-  "/sponsors": `${PREFIX} - Sponsors`,
+  "/sponsors": `${PREFIX} - Our Sponsors`,
   "/gallery": `${PREFIX} - Gallery`,
-  "/contacts": `${PREFIX} - Contacts`,
+  "/contacts": `${PREFIX} - Contact Us`,
   "*": `Page Not Found`,
 };

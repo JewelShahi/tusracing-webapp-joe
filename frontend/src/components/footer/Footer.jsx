@@ -141,7 +141,7 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="text-center md:text-left">
                 <p className="text-sm text-base-content/70">
-                  © {new Date().getFullYear()} FST Racing Team. All rights reserved.
+                  © {new Date().getFullYear()} TU Sofia Racing Team. All rights reserved.
                 </p>
                 <div className="flex gap-4 mt-2 justify-center md:justify-start">
                   <a href="/terms" className="link link-hover text-xs">Terms of Use</a>

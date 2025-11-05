@@ -244,9 +244,8 @@
     "title": "Извън пистата",
     "message": "Страницата е в ремонт или е премахната",
     "f1FactTitle": "F1 Факт",
-    "returnButton": "Връщане",
-    "searchButton": "Търси",
-    "pressEscClose": "Натиснете ESC за затваряне"
+    "returnButton": "Върнете се в Pit Lane",
+    "searchButton": "Намерете пистата"
   },
 
   "footer": {

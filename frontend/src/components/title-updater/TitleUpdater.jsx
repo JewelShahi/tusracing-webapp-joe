@@ -1,14 +1,14 @@
 // src/components/TitleUpdater.jsx
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { routeTitles } from "../routesTitle";
+import { routeTitles } from "../../routesTitle";
 
 const TitleUpdater = () => {
   const location = useLocation();
 
   useEffect(() => {
     // Force title update based on route
-    const title = routeTitles[location.pathname] || "My Website";
+    const title = routeTitles[location.pathname] || "Page Not Found";
     document.title = title;
   }, [location.pathname]);
 

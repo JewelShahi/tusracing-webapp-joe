@@ -275,13 +275,13 @@ const Home = () => {
           <AnimatedSection delay={400}>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
               <a
-                href="/contact"
+                href="/sponsors"
                 className="btn bg-base-100 btn-md sm:btn-lg px-6 sm:px-10 font-bold"
               >
                 {t('home.cta.becomeSponsor')}
               </a>
               <a
-                href="/join"
+                href="/join-us"
                 className="btn btn-primary btn-md sm:btn-lg px-6 sm:px-10 font-bold border-none hover:bg-accent/90/80 hover:text-primary-content"
               >
                 {t('home.cta.joinOurTeam')}
