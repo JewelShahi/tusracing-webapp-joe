@@ -13,15 +13,16 @@ import Gallery from "./pages/gallery/Gallery.jsx";
 import NotFound from "./pages/not-found/NotFound.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import GoUpButton from "./components/up-button/GoUpButton.jsx";
+import TitleUpdater from "./components/TitleUpdater";
 import "./index.css";
 
 const App = () => {
   return (
     <ThemeProvider>
       <Router>
-        
-        <Navbar />
+        <TitleUpdater /> {/* Force browser tab title */}
 
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
