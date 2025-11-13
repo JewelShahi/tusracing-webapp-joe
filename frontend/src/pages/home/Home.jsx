@@ -1,6 +1,7 @@
 import AnimatedSection from "../../components/animate/AnimatedSection";
 import { useTheme } from "../../theme-manager/ThemeContext";
 import { useTranslation } from 'react-i18next';
+import "./Home.css"
 
 const Home = () => {
   const { theme } = useTheme();
@@ -97,7 +98,7 @@ const Home = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={400} direction="up">
-              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light mb-6 sm:mb-8">
+              <p className="ribbon text-white font-bold text-sm sm:text-lg md:text-xl lg:text-2xl brightness-70">
                 {t('home.subtitle')}
               </p>
             </AnimatedSection>
@@ -107,7 +108,7 @@ const Home = () => {
                 <a href="/about/our-cars" className="btn btn-primary btn-md sm:btn-lg px-6 sm:px-8 shadow-2xl hover:scale-105 transition-transform duration-300">
                   {t('home.buttons.ourCars')}
                 </a>
-                <a href="/about/join-us" className="btn btn-md sm:btn-lg px-6 sm:px-8 hover:bg-accent/90 text-primary-content transition-all duration-300">
+                <a href="/about/join-us" className="btn btn-md sm:btn-lg px-6 sm:px-8 hover:bg-accent/90 transition-all duration-300">
                   {t('home.buttons.joinTeam')}
                 </a>
               </div>

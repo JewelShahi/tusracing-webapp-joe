@@ -1,8 +1,8 @@
-import React from "react";
 import { FaInstagram, FaTwitter, FaLinkedin, FaGithub, FaEnvelope, FaMapMarkerAlt, FaPhone, FaTrophy, FaFlagCheckered, FaTools } from "react-icons/fa";
 import AnimatedSection from "../animate/AnimatedSection";
 import { useTranslation } from "react-i18next";
 import SponsorCarousel from "./SponsorCarousel";
+import "./Footer.css"
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -139,6 +139,7 @@ const Footer = () => {
           {/* Bottom Bar */}
           <div className="border-t border-base-300 pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+
               <div className="text-center md:text-left">
                 <p className="text-sm text-base-content/70">
                   © {new Date().getFullYear()} TU Sofia Racing Team. All rights reserved.
@@ -150,42 +151,31 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <a
-                  href="https://www.instagram.com/tus_racingteam/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"
-                >
-                  <FaInstagram />
-                </a>
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"
-                >
-                  <FaGithub />
-                </a>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"
-                >
-                  <FaLinkedin />
-                </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"
-                >
-                  <FaTwitter />
-                </a>
+              {/* Ribbon hugging content */}
+              <div className="footer-ribbon brightness-70">
+                <div className="flex gap-4 p-2">
+                  <a href="https://www.instagram.com/tus_racingteam/" target="_blank" rel="noopener noreferrer"
+                    className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform">
+                    <FaInstagram />
+                  </a>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                    className="w-10 h-10 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform">
+                    <FaGithub />
+                  </a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                    className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform">
+                    <FaLinkedin />
+                  </a>
+                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+                    className="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform">
+                    <FaTwitter />
+                  </a>
+                </div>
               </div>
+
             </div>
           </div>
+
         </div>
       </footer>
     </>

@@ -429,11 +429,11 @@ const Contacts = () => {
                   </p>
 
                   {/* Wrap the link in a div */}
-                  <div className="max-w-full text-center break-all">
-                    <FaEnvelope className="inline mr-2 text-primary" />
+                  <div className="flex flex-row items-center justify-center max-w-full text-center break-all">
+                    <FaEnvelope className="inline mr-2 text-primary text-xl" />
                     <a
                       href="mailto:formulastudentbg@gmail.com"
-                      className="text-primary-content hover:underline text-lg font-medium "
+                      className="hover:underline text-lg font-medium "
                     >
                       formulastudentbg@gmail.com
                     </a>
