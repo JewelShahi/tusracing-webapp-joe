@@ -139,9 +139,9 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-center">
             {[
               { value: "20+", label: t('home.stats.teamMembers') },
-              { value: "2", label: t('home.stats.raceCars') },
+              { value: "3", label: t('home.stats.raceCars') },
               { value: "5+", label: t('home.stats.competitions') },
-              { value: "3", label: t('home.stats.continents') }
+              { value: "3+", label: t('home.stats.continents') }
             ].map((stat, index) => (
               <AnimatedSection key={index} delay={index * 100} direction="up">
                 <div>
@@ -228,7 +228,7 @@ const Home = () => {
       </div>
 
       {/* Partners Section */}
-      <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-24">
+      {/* <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-24">
         <AnimatedSection delay={0}>
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">{t('home.partnersTitle')}</h2>
@@ -262,7 +262,7 @@ const Home = () => {
             </AnimatedSection>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Final CTA Section */}
       <div className="relative bg-gradient-to-br from-primary to-primary-focus text-primary-content overflow-hidden">
