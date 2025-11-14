@@ -166,34 +166,34 @@ const Home = () => {
           </div>
         </AnimatedSection>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-    {achievements.map((achievement, index) => (
-      <AnimatedSection key={achievement.title} delay={index * 150}>
-        <div className="group relative bg-gradient-to-br from-base-200 to-base-300 rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden flex flex-col h-full">
-          {/* Decorative circle */}
-          <div className="absolute top-0 right-0 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-primary/10 rounded-full -mr-10 -mt-10 sm:-mr-12 sm:-mt-12 md:-mr-16 md:-mt-16 group-hover:scale-150 transition-transform duration-700"></div>
-          
-          <div className="relative z-10 flex flex-col flex-1">
-            {/* Icon */}
-            <div className="text-3xl sm:text-4xl md:text-6xl mb-3 sm:mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
-              {achievement.icon}
-            </div>
+          {achievements.map((achievement, index) => (
+            <AnimatedSection key={achievement.title} delay={index * 150}>
+              <div className="group relative bg-gradient-to-br from-base-200 to-base-300 rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden flex flex-col h-full">
+                {/* Decorative circle */}
+                <div className="absolute top-0 right-0 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-primary/10 rounded-full -mr-10 -mt-10 sm:-mr-12 sm:-mt-12 md:-mr-16 md:-mt-16 group-hover:scale-150 transition-transform duration-700"></div>
 
-            {/* Title */}
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">{achievement.title}</h3>
+                <div className="relative z-10 flex flex-col flex-1">
+                  {/* Icon */}
+                  <div className="text-3xl sm:text-4xl md:text-6xl mb-3 sm:mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+                    {achievement.icon}
+                  </div>
 
-            {/* Description */}
-            <p className="text-xs sm:text-sm md:text-base text-base-content/70 mb-3 flex-1">{achievement.description}</p>
+                  {/* Title */}
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">{achievement.title}</h3>
 
-            {/* Value */}
-            <div className="flex flex-row items-baseline justify-start gap-2 mt-auto">
-              <span className="text-xl sm:text-2xl md:text-2xl font-black text-primary">{achievement.value}</span>
-              <span className="text-[10px] sm:text-xs md:text-sm uppercase tracking-wider text-base-content/60">{achievement.label}</span>
-            </div>
-          </div>
+                  {/* Description */}
+                  <p className="text-xs sm:text-sm md:text-base text-base-content/70 mb-3 flex-1">{achievement.description}</p>
+
+                  {/* Value */}
+                  <div className="flex flex-row items-baseline justify-start gap-2 mt-auto">
+                    <span className="text-xl sm:text-2xl md:text-2xl font-black text-primary">{achievement.value}</span>
+                    <span className="text-[10px] sm:text-xs md:text-sm uppercase tracking-wider text-base-content/60">{achievement.label}</span>
+                  </div>
+                </div>
+              </div>
+            </AnimatedSection>
+          ))}
         </div>
-      </AnimatedSection>
-    ))}
-  </div>
       </div>
 
       {/* Team Values Section */}
@@ -228,7 +228,7 @@ const Home = () => {
       </div>
 
       {/* Partners Section */}
-      <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-24">
+      {/* <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-24">
         <AnimatedSection delay={0}>
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">{t('home.partnersTitle')}</h2>
@@ -262,10 +262,18 @@ const Home = () => {
             </AnimatedSection>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Final CTA Section */}
       <div className="relative bg-gradient-to-br from-primary to-primary-focus text-primary-content overflow-hidden">
+        {/* Single wave cutout at the top */}
+        <div className="wave-top">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,60 C150,20 350,100 500,60 C650,20 850,100 1000,60 C1150,20 1200,40 1200,60 L1200,0 L0,0 Z"
+              fill="currentColor"></path>
+          </svg>
+        </div>
+
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-24 h-24 sm:w-32 sm:h-32 bg-white/10 rounded-full blur-3xl"></div>
