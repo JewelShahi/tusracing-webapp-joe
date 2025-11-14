@@ -174,7 +174,6 @@ const Sponsors = () => {
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent p-4">
                 {t('sponsors.heroTitle')}
-                <span className="block">{t('sponsors.heroTitleSuffix')}</span>
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-base-content/70 max-w-3xl mx-auto leading-relaxed">
                 {t('sponsors.heroDescription')}
