@@ -144,8 +144,8 @@ const Cars = () => {
                   <div className="absolute top-4 right-4 badge badge-primary text-white font-bold">
                     {car.year}
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent">
-                    <h2 className="text-2xl font-bold text-white" id="car-ribbon">{car.name}</h2>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent">
+                    <h2 className="text-xl md:text-2xl font-bold text-white" id="car-ribbon">{car.name}</h2>
                   </div>
                 </figure>
 

@@ -265,12 +265,15 @@ const Home = () => {
       </div> */}
 
       {/* Final CTA Section */}
-      <div className="relative bg-gradient-to-br from-primary to-primary-focus text-primary-content overflow-hidden">
+      <div className="relative bg-gradient-to-br from-primary to-primary-focus text-primary-content overflow-hidden pt-8">
         {/* Single wave cutout at the top */}
         <div className="wave-top">
           <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,60 C150,20 350,100 500,60 C650,20 850,100 1000,60 C1150,20 1200,40 1200,60 L1200,0 L0,0 Z"
-              fill="currentColor"></path>
+            <path
+              d="M0,60 C150,20 350,100 500,60 C650,20 850,100 1000,60 C1150,20 1200,40 1200,60 L1200,0 L0,0 Z"
+              fill="currentColor"
+              stroke="none"
+            ></path>
           </svg>
         </div>
 
