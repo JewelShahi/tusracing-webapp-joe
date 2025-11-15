@@ -128,14 +128,20 @@ const About = () => {
 
         <div className="absolute inset-0 bg-gradient-to-br from-accent  to-bg-black/10"></div>
 
-        <AnimatedSection direction="up" delay={200}>
-          <div className="text-center max-w-3xl mx-auto">
+        <div className="text-center max-w-3xl mx-auto">
+          <AnimatedSection direction="up" delay={200}>
+
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               {t('about.ctaTitle')}
             </h2>
+          </AnimatedSection>
+          <AnimatedSection direction="up" delay={200}>
+
             <p className="text-lg text-primary-content mb-8">
               {t('about.ctaDescription')}
             </p>
+          </AnimatedSection>
+          <AnimatedSection direction="up" delay={200}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/about/join-us" className="btn btn-primary btn-lg px-8">
                 {t('about.ctaButtons.joinTheTeam')}
@@ -147,8 +153,8 @@ const About = () => {
                 {t('about.ctaButtons.contactUs')}
               </a>
             </div>
-          </div>
-        </AnimatedSection>
+          </AnimatedSection>
+        </div>
       </div>
     </div>
   );
