@@ -411,70 +411,73 @@ const Contacts = () => {
             </div>
           </AnimatedSection>
 
-          {/* Team Contact - Simplified */}
-          <AnimatedSection direction="up" delay={300}>
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-bold mb-6 flex items-center">
-                <FaHeadset className="mr-3 text-primary" />
-                {t('contacts.badge') }
-              </h2>
+          {/* Left Side */}
+          <div>
+            {/* Team Contact - Simplified */}
+            <AnimatedSection direction="up" delay={300}>
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-bold mb-6 flex items-center">
+                  <FaHeadset className="mr-3 text-primary" />
+                  {t('contacts.badge')}
+                </h2>
 
-              <div className="bg-base-200 rounded-xl p-6 sm:p-8 shadow-xl">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                    <FaEnvelope className="text-4xl text-primary" />
-                  </div>
-                  <h3 className="font-bold text-xl mb-2">{t('contacts.heroTitle') }</h3>
-                  <p className="text-base-content/70 mb-4">
-                    {t('contacts.heroDescription') }
-                  </p>
+                <div className="bg-base-200 rounded-xl p-6 sm:p-8 shadow-xl">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                      <FaEnvelope className="text-4xl text-primary" />
+                    </div>
+                    <h3 className="font-bold text-xl mb-2">{t('contacts.heroTitle')}</h3>
+                    <p className="text-base-content/70 mb-4">
+                      {t('contacts.heroDescription')}
+                    </p>
 
-                  {/* Wrap the link in a div */}
-                  <div className="flex flex-row items-center justify-center max-w-full text-center break-all">
-                    <FaEnvelope className="inline mr-2 text-primary text-xl" />
-                    <a
-                      href="mailto:formulastudentbg@gmail.com"
-                      className="hover:underline text-lg font-medium "
-                    >
-                      formulastudentbg@gmail.com
-                    </a>
+                    {/* Wrap the link in a div */}
+                    <div className="flex flex-row items-center justify-center max-w-full text-center break-all">
+                      <FaEnvelope className="inline mr-2 text-primary text-xl" />
+                      <a
+                        href="mailto:formulastudentbg@gmail.com"
+                        className="hover:underline text-lg font-medium "
+                      >
+                        formulastudentbg@gmail.com
+                      </a>
+                    </div>
                   </div>
                 </div>
+
               </div>
+            </AnimatedSection>
 
-            </div>
-          </AnimatedSection>
-        </div>
+            {/* Social Media Section - Added more spacing */}
+            <div className="mt-8 md:mt-2 bg-base-200 rounded-xl p-6 sm:p-8 shadow-xl">
+              <AnimatedSection direction="up" delay={400}>
+                <div className="flex flex-col items-center text-center mb-8">
+                  <h2 id="social-ribbon" className="text-center text-2xl sm:text-3xl font-bold mb-4">
+                    {t('contacts.social.title')}
+                  </h2>
+                  <p className="text-base-content/70 max-w-2xl mx-auto">
+                    {t('contacts.social.description')}
+                  </p>
+                </div>
 
-        {/* Social Media Section - Added more spacing */}
-        <div className="mt-20 sm:mt-24">
-          <AnimatedSection direction="up" delay={400}>
-            <div className="flex flex-col items-center text-center mb-8">
-              <h2 id="social-ribbon" className="text-center text-2xl sm:text-3xl font-bold mb-4">
-                {t('contacts.social.title') }
-              </h2>
-              <p className="text-base-content/70 max-w-2xl mx-auto">
-                {t('contacts.social.description') }
-              </p>
+                <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+                  {socialMedia.map((social) => (
+                    <a
+                      key={social.id}
+                      href={social.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group relative"
+                    >
+                      <div className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${social.gradient} rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform`}>
+                        <div className="text-2xl sm:text-3xl">{social.icon}</div>
+                      </div>
+                      <p className="text-center mt-2 text-sm font-medium">{social.name}</p>
+                    </a>
+                  ))}
+                </div>
+              </AnimatedSection>
             </div>
-
-            <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-              {socialMedia.map((social) => (
-                <a
-                  key={social.id}
-                  href={social.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative"
-                >
-                  <div className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${social.gradient} rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform`}>
-                    <div className="text-2xl sm:text-3xl">{social.icon}</div>
-                  </div>
-                  <p className="text-center mt-2 text-sm font-medium">{social.name}</p>
-                </a>
-              ))}
-            </div>
-          </AnimatedSection>
+          </div>
         </div>
       </div>
 
@@ -499,20 +502,37 @@ const Contacts = () => {
       </AnimatedSection>
 
       {/* Support CTA */}
-      <AnimatedSection direction="up" delay={600}>
-        <div className="relative bg-gradient-to-br from-primary to-primary-focus text-primary-content overflow-hidden">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="absolute inset-0">
-            <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-10 right-10 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
-          </div>
-          <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-24 text-center relative z-10">
+      <div className="relative bg-gradient-to-br from-primary to-primary-focus text-primary-content overflow-hidden pt-8">
+
+      {/* Wavy top */}
+        <div className="contact-wave-top z-10">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+              d="M0,56 C200,106 400,6 600,56 C800,106 1000,6 1200,56 L1200,0 L0,0 Z"
+              fill="currentColor"
+              stroke="none"
+            ></path>
+          </svg>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary  to-bg-black/10"></div>
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-24 text-center relative z-10">
+          <AnimatedSection delay={600}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6">
               {t('contacts.support.title')}
             </h2>
+          </AnimatedSection>
+
+          <AnimatedSection delay={600}>
             <p className="text-base sm:text-lg lg:text-xl mb-8 sm:mb-10 max-w-3xl mx-auto text-primary-content/90">
               {t('contacts.support.description')}
             </p>
+          </AnimatedSection>
+
+          <AnimatedSection delay={600}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/sponsor"
@@ -520,16 +540,10 @@ const Contacts = () => {
               >
                 {t('contacts.support.becomeSponsor')}
               </a>
-              {/* <a
-                href="/donate"
-                className="btn btn-md sm:btn-lg px-6 sm:px-10 bg-primary hover:bg-accent/90 text-primary-content"
-              >
-                {t('contacts.support.makeDonation')}
-              </a> */}
             </div>
-          </div>
+          </AnimatedSection>
         </div>
-      </AnimatedSection>
+      </div>
     </div>
   );
 };

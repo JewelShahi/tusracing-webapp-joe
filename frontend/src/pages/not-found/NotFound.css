@@ -1,0 +1,65 @@
+.notfound-ribbon {
+  font-weight: bold; 
+
+  --s: 2.5em;   /* the ribbon size */
+  --a: 35deg; /* the angle of the folded part */
+  --r: .5em;  /* the cutout part */
+
+  /* DaisyUI primary color */
+  --c: theme("colors.primary");
+
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  line-height: 1.9;
+  padding-inline: calc(1lh * tan(var(--a)/2) + .3em);
+  margin-block: calc(var(--s) * sin(var(--a)));
+  clip-path: polygon(
+    0 0,
+    0 -999px,
+    calc(100% - 1lh * tan(var(--a)/2)) -999px,
+    calc(100% - 1lh * tan(var(--a)/2)) 0,
+    100% 100%,
+    100% 999px,
+    calc(1lh * tan(var(--a)/2)) 999px,
+    calc(1lh * tan(var(--a)/2)) 100%
+  );
+  background-color: var(--c); 
+  width: fit-content;
+  position: relative;
+}
+
+.notfound-ribbon:before,
+.notfound-ribbon:after {
+  content: "";
+  position: absolute;
+  height: 1lh;
+  width: var(--s);
+  background: color-mix(in srgb, var(--c), #000 40%);
+  rotate: calc(-1 * var(--a));
+}
+
+.notfound-ribbon:before {
+  right: 0;
+  bottom: 0;
+  transform-origin: bottom right;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 1lh / tan(var(--a))) 0,
+    100% 100%,
+    0 100%,
+    var(--r) 50%
+  );
+}
+
+.notfound-ribbon:after {
+  left: 0;
+  top: 0;
+  transform-origin: top left;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    calc(100% - var(--r)) 50%,
+    100% 100%,
+    calc(1lh / tan(var(--a))) 100%
+  );
+}

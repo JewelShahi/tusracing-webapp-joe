@@ -289,8 +289,28 @@
     "message": "Looks like you've gone off the racing line! This page might be in the garage for repairs or has been retired from the circuit.",
     "f1FactTitle": "F1 Fact",
     "returnButton": "Return to Pit Lane",
-    "searchButton": "Search Circuit",
-    "pressEscClose": "Press ESC to close"
+    "f1Facts": [
+      "F1 cars can accelerate from 0 to 100 mph in just 2.5 seconds",
+      "An F1 steering wheel costs over $50,000 and has over 25 buttons",
+      "F1 tires can reach temperatures of 120°C during a race",
+      "F1 drivers lose about 3kg of body weight during a race",
+      "An F1 car can drive upside down at 120mph due to downforce",
+      "F1 engines can rev up to 20,000 RPM",
+      "F1 teams can change all four tires in under 3 seconds",
+      "F1 cars produce enough downforce to drive on a ceiling at 100mph",
+      "F1 cars use carbon fiber brakes that can reach temperatures of 1,000°C",
+      "F1 drivers experience G-forces of up to 6G during cornering",
+      "An F1 car's front wing can produce more downforce than an entire road car",
+      "F1 cars can go from 200 mph to a complete stop in just 4 seconds",
+      "F1 teams use over 100 sensors on each car to collect data",
+      "The fuel in an F1 car is so thin it would be illegal to use in a road car",
+      "F1 drivers have heart rates of over 180 bpm during a race",
+      "An F1 car's engine can't be started when cold — it needs to be pre-heated",
+      "F1 cars are designed to be most efficient at high speeds, not low speeds",
+      "The total cost of an F1 car is around $15 million",
+      "F1 drivers can lose up to 3 liters of fluid during a race",
+      "F1 tires are designed to last only about 100 miles before needing replacement"
+    ]
   },
 
   "footer": {

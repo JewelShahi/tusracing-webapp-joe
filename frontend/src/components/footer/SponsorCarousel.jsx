@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import AnimatedSection from "../animate/AnimatedSection";
 import { useTranslation } from "react-i18next";
 import api from '../../api/axios';
-
+import "./Footer.css"
 
 // const galleryItems = [
 //   {
@@ -66,13 +66,13 @@ const SponsorCarousel = () => {
         const response = await api.get('/sponsors');
         let fetchedSponsors = [];
         response.data.forEach(sponsor => {
-            let newSponsor = {
-              name: sponsor.name,
-              id: sponsor.id,
-              imageUrl: sponsor.logo,
-              href: sponsor.link
-            };
-            fetchedSponsors.push(newSponsor);
+          let newSponsor = {
+            name: sponsor.name,
+            id: sponsor.id,
+            imageUrl: sponsor.logo,
+            href: sponsor.link
+          };
+          fetchedSponsors.push(newSponsor);
         });
         setSponsors(fetchedSponsors);
         console.log('Fetched sponsors:', response.data);
@@ -93,9 +93,11 @@ const SponsorCarousel = () => {
         <div className="relative flex items-center justify-center mb-8 w-full">
           {/* Centered title */}
           <AnimatedSection delay={0} direction="up">
-            <h2 className="text-3xl font-semibold text-base-content text-center">
-              {t("footer-sponsors.title")}
-            </h2>
+            <div className="sponsorcarousel-ribbon">
+              <h2 className="text-xl md:text-2xl font-semibold text-primary-content text-center">
+                {t("footer-sponsors.title")}
+              </h2>
+            </div>
           </AnimatedSection>
 
           {/* Right-aligned animated button (only visible on desktop) */}
@@ -124,9 +126,8 @@ const SponsorCarousel = () => {
 
             {/* Scrolling Track */}
             <div
-              className={`flex gap-[12px] w-max animate-[scroll_30s_linear_infinite] ${
-                isHovered ? "pause" : ""
-              }`}
+              className={`flex gap-[12px] w-max animate-[scroll_30s_linear_infinite] ${isHovered ? "pause" : ""
+                }`}
             >
               {scrollItems.map((item, i) => (
                 <a

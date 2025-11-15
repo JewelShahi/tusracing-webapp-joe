@@ -1,6 +1,7 @@
 import { useTheme } from "../../theme-manager/ThemeContext";
 import AnimatedSection from "../../components/animate/AnimatedSection";
 import { useTranslation } from 'react-i18next';
+import "./About.css"
 
 const About = () => {
   const { theme } = useTheme();
@@ -113,13 +114,26 @@ const About = () => {
       </div>
 
       {/* ================= CTA SECTION ================= */}
-      <div className="container mx-auto px-6 py-20">
+      <div className="mx-auto px-0 pt-28 pb-12 relative bg-gradient-to-br from-accent to-primaty-content text-primary-content overflow-hidden">
+        {/* Wavy top */}
+        <div className="about-wave-top">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+              d="M0,60 C150,10 350,110 500,60 C650,10 850,110 1000,60 C1150,10 1200,40 1200,60 L1200,0 L0,0 Z"
+              fill="currentColor"
+              stroke="none"
+            ></path>
+          </svg>
+        </div>
+
+        <div className="absolute inset-0 bg-gradient-to-br from-accent  to-bg-black/10"></div>
+
         <AnimatedSection direction="up" delay={200}>
-            <div className="text-center max-w-3xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               {t('about.ctaTitle')}
             </h2>
-            <p className="text-lg text-base-content/70 mb-8">
+            <p className="text-lg text-primary-content mb-8">
               {t('about.ctaDescription')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

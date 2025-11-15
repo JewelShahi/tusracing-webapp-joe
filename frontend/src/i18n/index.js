@@ -18,6 +18,7 @@ i18n
     lng: defaultLanguage,
     fallbackLng: "en",
     interpolation: { escapeValue: false },
+    returnObjects: true   // ✅ THIS is required to access arrays & objects
   });
 
 // Save language changes to localStorage

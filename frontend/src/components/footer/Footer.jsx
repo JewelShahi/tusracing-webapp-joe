@@ -82,36 +82,49 @@ const Footer = () => {
 
             {/* Contact Info - Compact */}
             <AnimatedSection delay={300} direction="up">
-              <div className="flex flex-col items-center">
-                <h4 className="text-xl font-bold mb-4 flex items-center gap-2 justify-center">
-                  <FaEnvelope className="text-primary" />
-                  {t('footer.getInTouch.title')}
-                </h4>
-                <div className="bg-base-100 rounded-xl p-4 shadow-lg w-full max-w-md space-y-3">
-                  <div className="flex items-center justify-center gap-3">
-                    <FaMapMarkerAlt className="text-primary text-lg" />
-                    <div className="text-center">
-                      <h5 className=" font-semibold">{t('footer.getInTouch.headquarters')}</h5>
-                      <p className="text-sm text-base-content/70">
-                        {t('footer.getInTouch.address')}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-center gap-3">
-                    <FaEnvelope className="text-primary text-lg" />
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=formulastudentbg@gmail.com" target="_blank" className="link link-hover text-center">
-                      formulastudentbg@gmail.com
-                    </a>
-                  </div>
-                  <div className="flex items-center justify-center gap-3">
-                    <FaPhone className="text-primary text-lg" />
-                    <a href="tel:+35912345678" className="link link-hover text-center">
-                      +359 123 456 78
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </AnimatedSection>
+  <div className="flex flex-col items-center">
+    {/* Section Title */}
+    <h4 className="text-xl font-bold mb-4 flex items-center gap-2 justify-center">
+      <FaEnvelope className="text-primary flex-shrink-0" />
+      {t('footer.getInTouch.title')}
+    </h4>
+
+    {/* Contact Card */}
+    <div className="bg-base-100 rounded-xl p-4 shadow-lg w-full max-w-md space-y-4">
+      {/* Headquarters */}
+      <div className="flex flex-row items-center justify-center gap-3">
+        <FaMapMarkerAlt className="text-primary text-lg sm:text-xl flex-shrink-0" />
+        <div className="text-center">
+          <h5 className="font-semibold">{t('footer.getInTouch.headquarters')}</h5>
+          <p className="text-sm text-base-content/70">
+            {t('footer.getInTouch.address')}
+          </p>
+        </div>
+      </div>
+
+      {/* Email */}
+      <div className="flex items-center justify-center gap-3">
+        <FaEnvelope className="text-primary text-lg sm:text-xl flex-shrink-0" />
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=formulastudentbg@gmail.com"
+          target="_blank"
+          className="link link-hover text-center break-all"
+        >
+          formulastudentbg@gmail.com
+        </a>
+      </div>
+
+      {/* Phone */}
+      <div className="flex items-center justify-center gap-3">
+        <FaPhone className="text-primary text-lg sm:text-xl flex-shrink-0" />
+        <a href="tel:+35912345678" className="link link-hover text-center">
+          +359 123 456 78
+        </a>
+      </div>
+    </div>
+  </div>
+</AnimatedSection>
+
 
           </div>
 
@@ -167,9 +180,9 @@ const Footer = () => {
                 © {new Date().getFullYear()} TU Sofia Racing Team. All rights reserved. Created by K. Yotsov and J. Shahi.
               </p>
               <div className="flex gap-4 mt-2 justify-center md:justify-start">
-                <a href="/terms" className="link link-hover text-xs">Terms of Use</a>
-                <a href="/privacy" className="link link-hover text-xs">Privacy Policy</a>
-                <a href="/cookies" className="link link-hover text-xs">Cookie Policy</a>
+                <a href="#" className="link link-hover text-xs">Terms of Use</a>
+                <a href="#" className="link link-hover text-xs">Privacy Policy</a>
+                <a href="#" className="link link-hover text-xs">Cookie Policy</a>
               </div>
             </div>
 

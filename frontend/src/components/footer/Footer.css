@@ -1,24 +1,75 @@
 .footer-ribbon {
   --r: 0.6em; /* control the cutout of the ribbon */
   --s: 1.8em; /* size of the folded part */
-  
-  line-height: 1.8; 
+
+  line-height: 1.8;
   padding-inline: 1lh;
   border-block: var(--s) solid #0005;
   background: theme("colors.info"); /* use theme color */
   clip-path: polygon(
     0 0,
-    1lh var(--r),          /* increased from .5lh to 1lh */
-    2lh 0,                 /* increased from 1lh to 2lh */
-    2lh var(--s),          /* match new fold width */
-    calc(100% - 1lh) var(--s),
+    1lh var(--r),
+    /* increased from .5lh to 1lh */ 2lh 0,
+    /* increased from 1lh to 2lh */ 2lh var(--s),
+    /* match new fold width */ calc(100% - 1lh) var(--s),
     100% calc(100% - var(--s)),
     100% 100%,
-    calc(100% - 1lh) calc(100% - var(--r)), /* increased from .5lh to 1lh */
-    calc(100% - 2lh) 100%,                  /* increased from 1lh to 2lh */
-    calc(100% - 2lh) calc(100% - var(--s)),
+    calc(100% - 1lh) calc(100% - var(--r)),
+    /* increased from .5lh to 1lh */ calc(100% - 2lh) 100%,
+    /* increased from 1lh to 2lh */ calc(100% - 2lh) calc(100% - var(--s)),
     1lh calc(100% - var(--s)),
     0 var(--s)
   );
   width: fit-content;
+}
+
+.sponsorcarousel-ribbon {
+  font-weight: bold;
+  --s: 1.8em; /* the ribbon size */
+  --d: 0.6em; /* the depth */
+  --c: 0.8em; /* the cutout part */
+
+  padding: 0 calc(var(--s) + 2 * var(--d) + 1.5em);
+  padding-top: 0.5em;
+  padding-bottom: 1.2em;
+  line-height: 1.2;
+  background: linear-gradient(
+        90deg,
+        #0004 var(--d),
+        #0000 0 calc(100% - var(--d)),
+        #0004 0
+      )
+      50% 0 / calc(100% - 2 * (var(--s) + var(--d))) calc(100% - var(--d)),
+    conic-gradient(from 135deg at 50% -50%, #0004 25%, #0008 0) var(--s) 100% /
+      calc(3 * var(--d)) var(--d),
+    conic-gradient(from 135deg at 50% -50%, #0004 25%, #0008 0)
+      calc(100% - var(--s)) 100% / calc(3 * var(--d)) var(--d);
+  background-repeat: no-repeat;
+  background-color: theme("colors.info"); /* Using Tailwind theme color */
+  clip-path: polygon(
+    0 0,
+    calc(var(--s) + var(--d)) 0,
+    calc(var(--s) + var(--d)) var(--d),
+    calc(var(--s) + 2 * var(--d)) var(--d),
+    calc(var(--s) + 2 * var(--d)) 0,
+    calc(100% - var(--s) - 2 * var(--d)) 0,
+    calc(100% - var(--s) - 2 * var(--d)) var(--d),
+    calc(100% - var(--s) - var(--d)) var(--d),
+    calc(100% - var(--s) - var(--d)) 0,
+    100% 0,
+    calc(100% - var(--c)) calc(50% - var(--d) / 2),
+    100% calc(100% - var(--d)),
+    calc(100% - var(--s)) calc(100% - var(--d)),
+    calc(100% - var(--s)) 100%,
+    calc(100% - var(--s) - 3 * var(--d)) 100%,
+    calc(100% - var(--s) - 3 * var(--d)) calc(100% - var(--d)),
+    calc(var(--s) + 3 * var(--d)) calc(100% - var(--d)),
+    calc(var(--s) + 3 * var(--d)) 100%,
+    var(--s) 100%,
+    var(--s) calc(100% - var(--d)),
+    0 calc(100% - var(--d)),
+    var(--c) calc(50% - var(--d) / 2)
+  );
+  width: fit-content;
+  margin: 0 auto; /* Center the ribbon */
 }

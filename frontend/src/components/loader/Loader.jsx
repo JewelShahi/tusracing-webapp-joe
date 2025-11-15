@@ -60,17 +60,6 @@ const Loader = () => {
         </div>
       </div>
 
-      {/* F1 flag pattern decoration */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-20">
-        <div className="flex">
-          {[...Array(8)].map((_, i) => (
-            <div
-              key={i}
-              className={`w-4 h-4 ${i % 2 === 0 ? 'bg-base-content' : 'bg-transparent'}`}
-            />
-          ))}
-        </div>
-      </div>
     </div>
   );
 };

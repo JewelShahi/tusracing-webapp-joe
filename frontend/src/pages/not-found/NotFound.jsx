@@ -3,6 +3,7 @@ import AnimatedSection from "../../components/animate/AnimatedSection";
 import { useTheme } from "../../theme-manager/ThemeContext";
 import { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
+import "./NotFound.css"
 
 const NotFound = () => {
   const { theme } = useTheme();
@@ -10,28 +11,7 @@ const NotFound = () => {
   const [speed, setSpeed] = useState(0);
   const [factIndex, setFactIndex] = useState(0);
 
-  const f1Facts = [
-    "F1 cars can accelerate from 0 to 100 mph in just 2.5 seconds",
-    "An F1 steering wheel costs over $50,000 and has over 25 buttons",
-    "F1 tires can reach temperatures of 120°C during a race",
-    "F1 drivers lose about 3kg of body weight during a race",
-    "An F1 car can drive upside down at 120mph due to downforce",
-    "F1 engines can rev up to 20,000 RPM",
-    "F1 teams can change all four tires in under 3 seconds",
-    "F1 cars produce enough downforce to drive on a ceiling at 100mph",
-    "F1 cars use carbon fiber brakes that can reach temperatures of 1,000°C",
-    "F1 drivers experience G-forces of up to 6G during cornering",
-    "An F1 car's front wing can produce more downforce than an entire road car",
-    "F1 cars can go from 200 mph to a complete stop in just 4 seconds",
-    "F1 teams use over 100 sensors on each car to collect data",
-    "The fuel in an F1 car is so thin it would be illegal to use in a road car",
-    "F1 drivers have heart rates of over 180 bpm during a race",
-    "An F1 car's engine can't be started when cold - it needs to be pre-heated",
-    "F1 cars are designed to be most efficient at high speeds, not low speeds",
-    "The total cost of an F1 car is around $15 million",
-    "F1 drivers can lose up to 3 liters of fluid during a race",
-    "F1 tires are designed to last only about 100 miles before needing replacement"
-  ];
+  const f1Facts = t("notFound.f1Facts", { returnObjects: true });
 
   // Speed interval
   useEffect(() => {
@@ -48,7 +28,7 @@ const NotFound = () => {
           return prev > 150 ? Math.max(0, prev - change) : prev;
         }
       });
-    }, 1000);
+    }, 800);
 
     return () => clearInterval(interval);
   }, []);
@@ -58,15 +38,15 @@ const NotFound = () => {
   useEffect(() => {
     const factInterval = setInterval(() => {
       setFactIndex(prev => (prev + 1) % f1Facts.length);
-    }, 2000);
+    }, 3500);
     return () => clearInterval(factInterval);
   }, [f1Facts.length]); // added dependency to satisfy ESLint
 
   return (
-    <div className="w-full min-h-[100vh] pt-8 relative bg-base-100">
+    <div className="w-full min-h-screen pt-8 relative bg-base-100">
       {/* Background overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center pt-8"
+        className="bg-cover bg-center pt-8 pb-8 min-h-[100vh]"
         style={{
           backgroundImage: theme === "lightTheme"
             ? `linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.5)), url('https://media.richardmille.com/wp-content/uploads/2016/12/25122440/vignetteMCL25.jpg?dpr=1&width=2000')`
@@ -76,21 +56,9 @@ const NotFound = () => {
           zIndex: 0
         }}
       >
-        {/* Status Badge */}
-        <AnimatedSection direction="down" delay={100}>
-          <div className="mb-6 sm:mb-8 flex justify-center">
-            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-primary/10 border border-primary/20 rounded-full backdrop-blur-sm animate-pulse">
-              <div className="w-2 h-2 bg-primary rounded-full"></div>
-              <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-wider text-center">
-                {t('notFound.statusBadge')}
-              </span>
-            </div>
-          </div>
-        </AnimatedSection>
-
         {/* Revving 404 */}
         <AnimatedSection direction="up" delay={200}>
-          <div className="relative mb-6 sm:mb-8 flex items-center justify-center gap-2 sm:gap-4 md:gap-8">
+          <div className="relative mb-6 mt-8 sm:mb-8 flex items-center justify-center gap-2 sm:gap-4 md:gap-8">
             <span className="text-5xl sm:text-7xl md:text-9xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">4</span>
 
             {/* F1 Steering Wheel */}
@@ -119,7 +87,10 @@ const NotFound = () => {
 
                   {/* Bottom display */}
                   <div className="absolute bottom-[8%] left-1/2 transform -translate-x-1/2 w-[50%] h-[12%] bg-gray-900 rounded flex items-center justify-center">
-                    <span className="text-accent text-[clamp(0.5rem,1.5vw,0.8rem)] font-bold">404</span>
+                    <span className="text-accent text-[clamp(0.5rem,1.5vw,0.8rem)] font-bold animate-[pulse_0.4s_ease-in-out_infinite]">
+                      Error
+                    </span>
+
                   </div>
                 </div>
 
@@ -135,7 +106,12 @@ const NotFound = () => {
 
         {/* Message */}
         <AnimatedSection direction="up" delay={300}>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-center text-base-content">{t('notFound.title')}</h2>
+          <div className="flex flex-row justify-center items-center">
+
+            <h2 className="notfound-ribbon text-2xl sm:text-3xl md:text-4xl text-center">
+              {t('notFound.title')}
+            </h2>
+          </div>
         </AnimatedSection>
 
         <AnimatedSection direction="up" delay={400}>
@@ -183,14 +159,6 @@ const NotFound = () => {
               <FaArrowRight className="relative z-10 group-hover:translate-x-1 transition-transform text-sm sm:text-base" />
               <div className="absolute inset-0 bg-gradient-to-r from-primary-focus to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
-
-            <button
-              onClick={() => window.history.back()}
-              className="group inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-base-200/80 text-base-content rounded-full font-bold text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:bg-base-300 border border-base-300 backdrop-blur-sm"
-            >
-              <FaSearch className="text-sm sm:text-base" />
-              <span>{t('notFound.searchButton')}</span>
-            </button>
           </div>
         </AnimatedSection>
       </div>

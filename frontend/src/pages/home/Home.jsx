@@ -267,7 +267,7 @@ const Home = () => {
       {/* Final CTA Section */}
       <div className="relative bg-gradient-to-br from-primary to-primary-focus text-primary-content overflow-hidden pt-8">
         {/* Single wave cutout at the top */}
-        <div className="wave-top">
+        <div className="home-wave-top">
           <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path
               d="M0,60 C150,20 350,100 500,60 C650,20 850,100 1000,60 C1150,20 1200,40 1200,60 L1200,0 L0,0 Z"
@@ -277,7 +277,7 @@ const Home = () => {
           </svg>
         </div>
 
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary  to-bg-black/10"></div>
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-24 h-24 sm:w-32 sm:h-32 bg-white/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 right-10 w-32 h-32 sm:w-48 sm:h-48 bg-white/10 rounded-full blur-3xl"></div>
