@@ -28,19 +28,6 @@ const JoinUs = () => {
   const [formProgress, setFormProgress] = useState(0);
   const [activeField, setActiveField] = useState("");
   const [showSuccess, setShowSuccess] = useState(false);
-  const [particles, setParticles] = useState([]);
-
-  // Generate random particles for background effect
-  useEffect(() => {
-    const newParticles = Array.from({ length: 20 }, (_, i) => ({
-      id: i,
-      size: Math.random() * 20 + 5,
-      left: `${Math.random() * 100}%`,
-      animationDelay: `${Math.random() * 5}s`,
-      animationDuration: `${Math.random() * 20 + 10}s`
-    }));
-    setParticles(newParticles);
-  }, []);
 
   // Calculate form progress
   useEffect(() => {
@@ -203,24 +190,6 @@ const JoinUs = () => {
     <div className="min-h-[100vh] bg-base-100 relative overflow-hidden pt-8">
       {/* Toast Container */}
       <Toaster />
-      
-      {/* Animated Background Particles */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        {particles.map(particle => (
-          <div
-            key={particle.id}
-            className="absolute rounded-full bg-primary/20 animate-pulse"
-            style={{
-              width: `${particle.size}px`,
-              height: `${particle.size}px`,
-              left: particle.left,
-              top: `${Math.random() * 100}%`,
-              animationDelay: particle.animationDelay,
-              animationDuration: particle.animationDuration,
-            }}
-          />
-        ))}
-      </div>
 
       {/* Racing Track Border */}
       <div className="fixed inset-0 border-8 border-dashed border-primary/10 pointer-events-none"></div>

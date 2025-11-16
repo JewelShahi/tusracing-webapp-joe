@@ -155,6 +155,46 @@ const Sponsors = () => {
   //   { id: "bronze", name: "Bronze Sponsor", icon: <FaGem />, color: "accent", description: "Essential partners in our racing ecosystem", sponsors: [{ name: "FastFix Tools", logo: "https://picsum.photos/seed/fastfix/200/100.jpg" }, { name: "RaceWear", logo: "https://picsum.photos/seed/racewear/200/100.jpg" }, { name: "TrackSide Support", logo: "https://picsum.photos/seed/trackside/200/100.jpg" }, { name: "Velocity Graphics", logo: "https://picsum.photos/seed/velocity/200/100.jpg" }, { name: "PitStop Pro", logo: "https://picsum.photos/seed/pitstop/200/100.jpg" }] }
   // ];
 
+  const SponsorTierCard = (tier, tierIndex) => {
+    return <AnimatedSection key={tier.id} direction="up" delay={300 + tierIndex * 100}>
+      <div
+        className={`relative overflow-hidden rounded-2xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] cursor-pointer ${tierBg[theme === 'darkTheme' ? 'dark' : 'light'][tier.color || 'default']}`}
+      >
+        <div className="p-6 text-primary-content">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="flex items-center mb-4 md:mb-0">
+              <div className="text-4xl mr-4 text-white">{tier.icon}</div>
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold text-white">{tier.name}</h3>
+                <p className="text-primary-content/80">{tier.description}</p>
+              </div>
+            </div>
+            <div className="text-center md:text-right">
+              <div className="text-3xl md:text-4xl font-bold text-white">{tier.sponsors.length}</div>
+              <div className="text-sm text-primary-content/80">{t('sponsors.partnersLabel')}</div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-base-100 p-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {tier.sponsors.map((sponsor) => (
+              <a href={sponsor.link} target="_blank" rel="noreferrer">
+                <div key={sponsor.name} className="group bg-base-200 rounded-xl p-4 hover:bg-base-300 transition-all duration-300">
+                  <div className="aspect-video bg-white rounded-lg overflow-hidden mb-3">
+                    <img src={sponsor.logo} alt={sponsor.name} className="w-full h-full object-contain p-2 group-hover:scale-110 transition-transform duration-300" />
+                  </div>
+                  <p className="text-center text-sm font-medium text-base-content/80 group-hover:text-primary transition-colors">
+                    {sponsor.name}
+                  </p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </AnimatedSection>;
+  }
+
   return (
     <div className="min-h-[100vh] pt-8 bg-base-100">
       <Toaster />
@@ -200,44 +240,7 @@ const Sponsors = () => {
 
           <div className="max-w-5xl mx-auto space-y-6">
             {sponsorTiers.map((tier, tierIndex) => (
-              <AnimatedSection key={tier.id} direction="up" delay={300 + tierIndex * 100}>
-                <div
-                  className={`relative overflow-hidden rounded-2xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] cursor-pointer ${tierBg[theme === 'darkTheme' ? 'dark' : 'light'][tier.color || 'default']}`}
-                // onClick={() => handleTierClick(tier)}
-                >
-                  <div className="p-6 text-primary-content">
-                    <div className="flex flex-col md:flex-row items-center justify-between">
-                      <div className="flex items-center mb-4 md:mb-0">
-                        <div className="text-4xl mr-4 text-white">{tier.icon}</div>
-                        <div>
-                          <h3 className="text-2xl md:text-3xl font-bold text-white">{tier.name}</h3>
-                          <p className="text-primary-content/80">{tier.description}</p>
-                        </div>
-                      </div>
-                      <div className="text-center md:text-right">
-                        <div className="text-3xl md:text-4xl font-bold text-white">{tier.sponsors.length}</div>
-                        <div className="text-sm text-primary-content/80">{t('sponsors.partnersLabel')}</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="bg-base-100 p-6">
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                      {tier.sponsors.map((sponsor) => (
-                        <a href={sponsor.link} target="_blank" rel="noreferrer">
-                          <div key={sponsor.name} className="group bg-base-200 rounded-xl p-4 hover:bg-base-300 transition-all duration-300" >
-                            <div className="aspect-video bg-white rounded-lg overflow-hidden mb-3">
-                              <img src={sponsor.logo} alt={sponsor.name} className="w-full h-full object-contain p-2 group-hover:scale-110 transition-transform duration-300" />
-                            </div>
-                            <p className="text-center text-sm font-medium text-base-content/80 group-hover:text-primary transition-colors">
-                              {sponsor.name}
-                            </p>
-                          </div>
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </AnimatedSection>
+              SponsorTierCard(tier, tierIndex)
             ))}
           </div>
         </div>
@@ -401,6 +404,7 @@ const Sponsors = () => {
       </div>
     </div>
   );
+
 };
 
 export default Sponsors;
